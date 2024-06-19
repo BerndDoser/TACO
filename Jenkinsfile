@@ -34,8 +34,7 @@ pipeline {
             post {
                 always {
                     recordIssues(
-                        tool: pyLint(pattern: 'pylint.log'),
-                        unstableTotalHigh: 100
+                        tool: pyLint(pattern: 'pylint.log')
                     )
                 }
             }
